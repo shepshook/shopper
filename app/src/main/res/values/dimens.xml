@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="material_card_elevation">5dp</dimen>
+    <dimen name="material_card_corner_radius">12dp</dimen>
+</resources>

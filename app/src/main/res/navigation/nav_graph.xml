@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CategoriesFragment">
+
+    <fragment
+        android:id="@+id/CategoriesFragment"
+        android:name="com.shepshook.shopper.fragment.CategoriesFragment"
+        android:label="Shopper"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_CategoriesFragment_to_productListActivity"
+            app:destination="@id/productListActivity" />
+        <action
+            android:id="@+id/action_CategoriesFragment_to_cartActivity"
+            app:destination="@id/cartActivity" />
+        <action
+            android:id="@+id/action_CategoriesFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/productListActivity"
+        android:name="com.shepshook.shopper.ProductListActivity"
+        android:label="Products"
+        tools:layout="@layout/activity_product_list">
+        <argument
+            android:name="categoryID"
+            app:argType="integer" />
+    </activity>
+    <activity
+        android:id="@+id/cartActivity"
+        android:name="com.shepshook.shopper.CartActivity"
+        android:label="Cart"
+        tools:layout="@layout/activity_cart" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.shepshook.shopper.fragment.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+</navigation>
